@@ -14,7 +14,7 @@ export class HomepageComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log("Uspesno");
+    console.log("homepage");
     this.authService.token$.pipe(
       skipWhile(value => !value),
       take(1))

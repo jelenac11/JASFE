@@ -19,7 +19,8 @@ export class CallbackComponent implements OnInit {
       this.authService.login();
       this.authService.handleLoginCallback();
     } else {
-      this.router.navigate(['/certificates']).then();
+      console.log("uslo ovde");
+      this.router.navigate(['/home']).then();
     }
   }
 

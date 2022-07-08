@@ -19,13 +19,18 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
+import { CompanyRegistrationComponent } from './company-registration/company-registration.component';
+import { CompanyRequestsComponent } from './company-requests/company-requests.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
     AppComponent,
     CallbackComponent,
     HomepageComponent,
-    RegisterComponent
+    RegisterComponent,
+    CompanyRegistrationComponent,
+    CompanyRequestsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +47,7 @@ import {MatSelectModule} from '@angular/material/select';
     MatNativeDateModule,
     MatRadioModule,
     MatSelectModule,
+    MatTableModule,
     CoreModule,
     SharedModule
   ],

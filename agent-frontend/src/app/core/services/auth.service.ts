@@ -32,7 +32,7 @@ export class AuthService {
 
   token$ = new BehaviorSubject<string>(null);
   userProfile$ = new BehaviorSubject<any>(null);
-  onAuthSuccessUrl = '/certificates';
+  onAuthSuccessUrl = '/home';
   onAuthFailureUrl = '/';
   logoutUrl = environment.auth.logout;
 

@@ -14,3 +14,12 @@ $dark-blue: #025f81;
 $light-blue: #eaf2fd;
 $red: #f54749;
 $grey-background: #f7f7f7;
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+%simple-raised-button {
+    outline: none;
+}
