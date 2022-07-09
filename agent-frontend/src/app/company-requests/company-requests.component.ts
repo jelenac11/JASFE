@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CompanyRequestResponse } from '../core/models/response/company-request-response.model';
+import { CompanyRequestResponse } from '../core/models/response/company-response.model';
 import { CompanyService } from '../core/services/company.service';
 import { Snackbar } from '../shared/snackbar/snackbar';
 

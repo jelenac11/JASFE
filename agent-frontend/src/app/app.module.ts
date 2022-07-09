@@ -22,6 +22,10 @@ import {MatSelectModule} from '@angular/material/select';
 import { CompanyRegistrationComponent } from './company-registration/company-registration.component';
 import { CompanyRequestsComponent } from './company-requests/company-requests.component';
 import {MatTableModule} from '@angular/material/table';
+import { EditCompanyComponent } from './edit-company/edit-company.component';
+import { JobOffersComponent } from './job-offers/job-offers.component';
+import { CreateJobOfferComponent } from './create-job-offer/create-job-offer.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,10 @@ import {MatTableModule} from '@angular/material/table';
     HomepageComponent,
     RegisterComponent,
     CompanyRegistrationComponent,
-    CompanyRequestsComponent
+    CompanyRequestsComponent,
+    EditCompanyComponent,
+    JobOffersComponent,
+    CreateJobOfferComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +55,7 @@ import {MatTableModule} from '@angular/material/table';
     MatRadioModule,
     MatSelectModule,
     MatTableModule,
+    MatTabsModule,
     CoreModule,
     SharedModule
   ],

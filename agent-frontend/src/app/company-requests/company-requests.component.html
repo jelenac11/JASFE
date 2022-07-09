@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="mt-2">
         <div class="mt-4">
-            <div>
+            <div *ngIf="companyRequests?.length !== 0">
                 <table mat-table [dataSource]="companyRequests" class="mat-elevation-z8">
                     <ng-container matColumnDef="name">
                       <th mat-header-cell *matHeaderCellDef> Name </th>
@@ -35,8 +35,11 @@
                   
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                  </table>
-                  
+                  </table>            
+            </div>
+
+            <div *ngIf="companyRequests?.length === 0" style="width: 100%; margin-top: 40px; display: flex; justify-content: center;">
+                <h1>There are no company registration requests.</h1>
             </div>
         </div>
     </div>

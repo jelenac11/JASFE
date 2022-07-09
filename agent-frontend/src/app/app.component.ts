@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from './core/services/auth.service';
 
 @Component({
@@ -9,12 +10,21 @@ import { AuthService } from './core/services/auth.service';
 export class AppComponent {
   
   constructor(
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) {
-
+    this.router.events.subscribe((url: any) => {
+      if (this.router.url === '/register') {
+        this.showNavbar = false;
+      } else {
+        this.showNavbar = true;
+      }
+    });
   }
 
   ngOnInit() {
     this.authService.renewAuth();
   }
+
+  showNavbar = true;
 }

@@ -5,7 +5,10 @@ import { CompanyRegistrationComponent } from './company-registration/company-reg
 import { CompanyRequestsComponent } from './company-requests/company-requests.component';
 import { NoAuthGuard } from './core/guards/no-auth.guard';
 import { RoleGuard } from './core/guards/role.guard';
+import { CreateJobOfferComponent } from './create-job-offer/create-job-offer.component';
+import { EditCompanyComponent } from './edit-company/edit-company.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { JobOffersComponent } from './job-offers/job-offers.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
@@ -33,6 +36,30 @@ const routes: Routes = [
     canActivate: [RoleGuard],
     data: {
       expectedRoles: 'post:company-request'
+    }
+  },
+  {
+    path: 'edit-company',
+    component: EditCompanyComponent,
+    canActivate: [RoleGuard],
+    data: {
+      expectedRoles: 'update:company'
+    }
+  },
+  {
+    path: 'create-job-offer',
+    component: CreateJobOfferComponent,
+    canActivate: [RoleGuard],
+    data: {
+      expectedRoles: 'post:job-offers'
+    }
+  },
+  {
+    path: 'job-offers',
+    component: JobOffersComponent,
+    canActivate: [RoleGuard],
+    data: {
+      expectedRoles: 'get:job-offers'
     }
   },
   {

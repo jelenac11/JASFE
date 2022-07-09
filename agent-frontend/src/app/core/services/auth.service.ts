@@ -67,6 +67,7 @@ export class AuthService {
 
     const jwt: JwtHelperService = new JwtHelperService();
     localStorage.setItem("role", JSON.stringify(jwt.decodeToken(authResult.accessToken).permissions));
+    localStorage.setItem("auth0id", JSON.stringify(jwt.decodeToken(authResult.accessToken).sub));
   }
 
   get isAuthenticated(): boolean {
